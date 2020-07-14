@@ -15,6 +15,7 @@ public class Test {
 		Expression t = new Plus(b,z);
 		
 		t.print();
+
 	}
 
 }
