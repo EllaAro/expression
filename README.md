@@ -4,3 +4,5 @@
 
 ## Implementation
 Implemented in `Java`, `OOP` based.
+### Class Diagram
+![Expression](https://user-images.githubusercontent.com/64191302/87484449-d7433780-c63e-11ea-800b-f522d006749d.gif)
