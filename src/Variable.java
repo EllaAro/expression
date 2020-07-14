@@ -8,6 +8,7 @@ public class Variable implements Expression {
 		this.var = var;
 	}
 	
+	/* We assume that the input is valid, otherwise we can handle it using exceptions */
 	public float calculate(HashMap<String,Integer> map) {
 		return map.get(this.var);
 	}
