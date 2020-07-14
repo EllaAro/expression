@@ -20,7 +20,7 @@ public class Number implements Expression{
 	
 	@Override
 	public void print() {
-		System.out.println(this.num);
+		System.out.println(this.toString());
     }
 
 }
