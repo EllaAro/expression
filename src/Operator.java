@@ -2,19 +2,18 @@ import java.util.HashMap;
 
 public abstract class Operator implements Expression {
 
-	protected Expression expOne; 
-	protected Expression expTwo;
+	protected Expression leftExp; 
+	protected Expression rightExp;
 	
-	public Operator(Expression expOne, Expression expTwo){
-		this.expOne = expOne;
-		this.expTwo = expTwo;
+	public Operator(Expression leftExp, Expression rightExp){
+		this.leftExp = leftExp;
+		this.rightExp = rightExp;
 	}
 	
 	@Override
 	public abstract float calculate(HashMap<String,Integer> map);
 	
 	@Override
-	public void print() {
-		System.out.println("This is the result : " );
-    }
+	public abstract void print(); 
+	
 }

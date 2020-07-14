@@ -12,10 +12,15 @@ public class Number implements Expression{
 	public float calculate(HashMap<String,Integer> map) {
 		return (float)num;
 	}
-
+	
+	@Override
+	public String toString() {
+		return Integer.toString(this.num);
+	}
+	
 	@Override
 	public void print() {
-		System.out.println("The value of the number is : ");
+		System.out.println(this.num);
     }
 
 }

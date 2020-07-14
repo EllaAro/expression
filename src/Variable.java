@@ -12,10 +12,14 @@ public class Variable implements Expression {
 		return map.get(this.var);
 	}
 	
-
+	@Override
+	public String toString() {
+		return this.var;
+	}
+	
 	@Override
 	public void print() {
-		System.out.println("The value of the variable is : " );		
+		System.out.println(this.var);		
 	}
 
 

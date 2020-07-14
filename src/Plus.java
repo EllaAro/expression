@@ -2,13 +2,26 @@ import java.util.HashMap;
 
 public class Plus extends Operator {
 	
-	public Plus(Expression expOne, Expression expTwo){
-		super(expOne,expTwo);
+	private String PLUS = " + ";
+
+	
+	public Plus(Expression leftExp, Expression rightExp){
+		super(leftExp,rightExp);
 	}
 	
 	@Override
 	public float calculate(HashMap<String,Integer> map) {
-		return this.expOne.calculate(map) + this.expTwo.calculate(map);
+		return this.leftExp.calculate(map) + this.rightExp.calculate(map);
+	}
+	
+	@Override
+	public String toString() {
+		return this.leftExp.toString() + PLUS + this.rightExp.toString();
+	}
+	
+	@Override
+	public void print() {
+		System.out.println(this.toString());
 	}
 	
 }
