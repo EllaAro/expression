@@ -24,9 +24,9 @@ public abstract class Operator implements Expression {
 	
 	// if an Expression is of type Variable or a positive Number we do not want to wrap parentheses around it 
 	private String expToString(Expression exp) {
-		return exp.getClass().getSimpleName() == "Variable" || 
-                exp.getClass().getSimpleName() == "Number" && ((Number) exp).isPositive() ? 
-                        exp.toString() : "(" + exp.toString() + ")";
+		return exp.getClass().getSuperclass().getName() == "Operator" || 
+                (exp.getClass().getSimpleName() == "Number" && !((Number) exp).isPositive()) ? 
+                        "(" + exp.toString() + ")" :  exp.toString() ;
 	}
 	
 	// used for the print() function, enables "recursive" printing of the Expression
