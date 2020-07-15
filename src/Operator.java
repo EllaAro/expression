@@ -24,8 +24,9 @@ public abstract class Operator implements Expression {
 	
 	// if an Expression is of type Variable or a positive Number we do not want to wrap parentheses around it 
 	private String expToString(Expression exp) {
-		return this.getClass().getSimpleName() == "Multiply" || this.getClass().getSimpleName() == "Divide" ||
-                (exp.getClass().getSimpleName() == "Number" && !((Number) exp).isPositive()) ? 
+		return ((this.getClass().getSimpleName() == "Multiply" || this.getClass().getSimpleName() == "Divide") 
+				&& exp.getClass().getSuperclass().getSimpleName() == "Operator" )
+				|| (exp.getClass().getSimpleName() == "Number" && !((Number) exp).isPositive()) ? 
                         "(" + exp.toString() + ")" :  exp.toString() ;
 	}
 	
