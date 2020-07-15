@@ -18,6 +18,10 @@ public class Number implements Expression{
 		return Integer.toString(this.num);
 	}
 	
+	public boolean isPositive() {
+		return this.num > 0;
+	}
+	
 	@Override
 	public void print() {
 		System.out.println(this.toString());
